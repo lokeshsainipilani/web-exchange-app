@@ -141,7 +141,7 @@ function TickerButton({ market, tokenImage }: { market: string, tokenImage: stri
 
     <div className="flex h-[60px] shrink-0 space-x-4 rounded-full m-1 bg-blue-200 bg-opacity-10  ">
       <div className="flex flex-row relative ml-2 -mr-4">
-        <img
+        <Image
           alt="Market Logo"
           loading="lazy"
           decoding="async"
@@ -149,7 +149,7 @@ function TickerButton({ market, tokenImage }: { market: string, tokenImage: stri
           className="z-10 rounded-full h-6 w-6 mt-4 outline-baseBackgroundL1"
           src={market === "TATA_INR" ? "/TATA.png" : tokenImage || "/sol copy.webp"}
         />
-        <img
+        <Image
           alt="USDC Logo"
           loading="lazy"
           decoding="async"

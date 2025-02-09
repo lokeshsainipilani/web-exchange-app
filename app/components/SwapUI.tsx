@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { OrderFillResponse } from "../utils/types";
 import { ToastAction } from "@/components/ui/toast";
 import { Label } from "@/components/ui/label";
+import Image from "next/image";
 
 export function SwapUI({ market , balance , inr }: { market: string , balance: string , inr: string }) {
   const { toast } = useToast();
@@ -40,7 +41,7 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
                     <div className="border-baseBorderLight border-2 border-solid flex items-center justify-between p-3 rounded-lg bg-transparent">
                       <span className="text-sm text-muted-foreground">
                         <div className="relative">
-                          <img src="/usdc copy.webp" className="w-6 h-6" />
+                          <Image src="/usdc copy.webp" alt="USDC Logo" className="w-6 h-6" />
                         </div>
                       </span>
                       <span className="">
@@ -50,7 +51,8 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
                     <div className="border-baseBorderLight border-2 border-solid flex items-center justify-between p-3 rounded-lg bg-transparent">
                       <span className="text-sm text-muted-foreground">
                         <div className="relative">
-                          <img
+                          <Image
+                          alt="TATA Logo"
                             src="/TATA.png"
                             className="size-7 rounded-full"
                           />
@@ -86,7 +88,7 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
                   />
                   <div className="flex flex-row absolute right-1 top-1 p-2">
                     <div className="relative">
-                      <img src="/usdc copy.webp" className="w-6 h-6" />
+                      <Image src="/usdc copy.webp" alt="USDC Logo" width={24} height={24} className="w-6 h-6" />
                     </div>
                   </div>
                 </div>
@@ -115,7 +117,7 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
                 />
                 <div className="flex flex-row absolute right-1 top-1 p-2">
                   <div className="relative">
-                    <img src="/TATA.png" className="w-6 h-6" />
+                    <Image src="/TATA.png" alt="TATA Logo" className="w-6 h-6" />
                   </div>
                 </div>
               </div>
@@ -158,7 +160,7 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
                 />
                 <div className="flex flex-row absolute right-1 top-1 p-2">
                   <div className="relative">
-                    <img src="/usdc copy.webp" className="w-6 h-6" />
+                    <Image src="/usdc copy.webp" alt="TATA Logo" className="w-6 h-6" />
                   </div>
                 </div>
               </div>

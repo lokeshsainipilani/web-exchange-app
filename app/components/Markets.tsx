@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Ticker } from "../utils/types";
 import { getTickers } from "../utils/httpClient";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export const Markets = () => {
   const [tickers, setTickers] = useState<Ticker[]>();
@@ -19,7 +20,7 @@ export const Markets = () => {
           <table className="w-full table-auto">
             <MarketHeader />
             {
-              (tickers && tickers.length > 0) ? tickers.map((m) => <MarketRow market={m} />) : <></>
+              (tickers && tickers.length > 0) ? tickers.map((m) => <MarketRow key={m.priceChange} market={m} />) : <></>
             }
           </table>
         </div>
@@ -40,7 +41,7 @@ function MarketRow({ market }: { market: Ticker }) {
               style={{ width: "40px", height: "40px" }}
             >
               <div className="relative">
-                <img
+                <Image
                   alt={market.symbol}
                   src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVvBqZC_Q1TSYObZaMvK0DRFeHZDUtVMh08Q&s"}
                   loading="lazy"

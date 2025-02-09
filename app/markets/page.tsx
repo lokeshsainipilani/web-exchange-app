@@ -293,14 +293,14 @@ export default function Component() {
 }
 
 // lib/utils.ts
-export const formatCurrency = (value: number) => {
+const formatCurrency = (value: number) => {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
   }).format(value);
 };
 
-export const formatPercentage = (value: number) => {
+const formatPercentage = (value: number) => {
   return new Intl.NumberFormat("en-US", {
     style: "percent",
     minimumFractionDigits: 2,
@@ -337,7 +337,7 @@ function CryptoList({ items }: { items: CryptoData[] }) {
                 className="w-8 h-8 overflow-hidden rounded-full"
                 whileHover={{ scale: 1.1 }}
               >
-                <img
+                <Image
                   src={crypto.image}
                   alt={crypto.symbol}
                   className="w-full h-full object-cover"
