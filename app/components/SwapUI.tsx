@@ -167,43 +167,44 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
             </div>
             <button
               type="button"
+              disabled={market !== "TATA_INR"}
               className={`font-semibold focus:ring-blue-200 focus:none focus:outline-none text-center h-12 rounded-xl text-xl px-4 py-3 my-4 ${
-                activeTab === "sell"
-                  ? "bg-red-500 hover:bg-red-600"
-                  : "bg-[#00c177] hover:bg-[#00c177]/80"
-              } text-gray-900 cursor-pointer active:scale-98`}
+              activeTab === "sell"
+                ? "bg-red-500 hover:bg-red-600"
+                : "bg-[#00c177] hover:bg-[#00c177]/80"
+              } text-gray-900 cursor-pointer active:scale-98 ${
+              market !== "TATA_INR" ? "opacity-50 cursor-not-allowed" : ""
+              }`}
               data-rac=""
               onClick={async () => {
-                try {
-                  console.log("Placing order...");
-                  const response = await axios.post(`${BASE_URL}/order`, {
-                    market: market,
-                    price: price.toString(),
-                    quantity: quantity.toString(),
-                    side: activeTab.toString(),
-                    userId: "1", // You might want to get this from authentication
-                  });
-                  setOrderPlaced(!orderPlaced);
-                  toast({
-                    variant: "success",
-                    title: "Success!",
-                    description: "Your order has been placed",
-                  });
-
-                  // You might want to show a success message here
-                } catch (error) {
-                  toast({
-                    variant: "destructive",
-                    title: "Uh oh! Something went wrong.",
-                    description: "There was a problem with your request.",
-                    action: (
-                      <ToastAction altText="Try again">Try again</ToastAction>
-                    ),
-                  });
-
-                  console.error("Error placing order:", error);
-                  // You might want to show an error message here
-                }
+              if (market !== "TATA_INR") return;
+              try {
+                console.log("Placing order...");
+                const response = await axios.post(`${BASE_URL}/order`, {
+                market: market,
+                price: price.toString(),
+                quantity: quantity.toString(),
+                side: activeTab.toString(),
+                userId: "1", // You might want to get this from authentication
+                });
+                console.log("response: ", response.data);
+                setOrderPlaced(!orderPlaced);
+                toast({
+                variant: "success",
+                title: "Success!",
+                description: "Your order has been placed",
+                });
+              } catch (error) {
+                toast({
+                variant: "destructive",
+                title: "Uh oh! Something went wrong.",
+                description: "There was a problem with your request.",
+                action: (
+                  <ToastAction altText="Try again">Try again</ToastAction>
+                ),
+                });
+                console.error("Error placing order:", error);
+              }
               }}
             >
               {activeTab === "sell" ? "Sell" : "Buy"}
