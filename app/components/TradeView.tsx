@@ -16,13 +16,14 @@ export function TradeView({
       let klineData: KLine[] = [];
       try {
         //40 Days
-        klineData = await getKlines(market, "1m", Math.floor((new Date().getTime() - 1000 * 60 * 60 * 24 * 40) / 1000), Math.floor(new Date().getTime() / 1000)); 
+        klineData = await getKlines(market, "1h", Math.floor((new Date().getTime() - 1000 * 60 * 60 * 24 * 10) / 1000), Math.floor(new Date().getTime() / 1000)); 
       } catch(e) {}
 
       if (chartRef) {
         if (chartManagerRef.current) {
           chartManagerRef.current.destroy();
         }
+        console.log(klineData)
         const chartManager = new ChartManager(
           chartRef.current,
           [
