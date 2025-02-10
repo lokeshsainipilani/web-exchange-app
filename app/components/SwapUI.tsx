@@ -2,7 +2,7 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { API_BASE_URL as BASE_URL } from "../utils/config";
+import { BASE_URL } from "../utils/httpClient";
 import { useToast } from "@/hooks/use-toast";
 import { OrderFillResponse } from "../utils/types";
 import { ToastAction } from "@/components/ui/toast";

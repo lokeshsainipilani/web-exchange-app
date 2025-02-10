@@ -4,7 +4,7 @@ import { OrderTable } from "@/app/components/OrderTable";
 import { SwapUI } from "@/app/components/SwapUI";
 import { TradeView } from "@/app/components/TradeView";
 import { Depth } from "@/app/components/depth/Depth";
-import { API_BASE_URL as BASE_URL } from "@/app/utils/config";
+import { BASE_URL } from "@/app/utils/httpClient";
 import axios from "axios";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";

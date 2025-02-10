@@ -1,6 +1,7 @@
 import { Ticker } from "./types";
-import { WS_BASE_URL as BASE_URL } from "./config";
+
 // export const BASE_URL = "wss://ws.backpack.exchange/"
+export const BASE_URL = "wss://exchangewsrailway-production.up.railway.app/"
 
 export class SignalingManager {
     private ws: WebSocket;

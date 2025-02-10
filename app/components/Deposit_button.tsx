@@ -17,7 +17,7 @@ import { CreditCard, Coins } from "lucide-react";
 import { SuccessButton } from "./core/Button";
 import { LoaderCircle } from "lucide-react";
 import axios from "axios";
-import { API_BASE_URL as BASE_URL } from "../utils/config";
+import { BASE_URL } from "../utils/httpClient";
 import { useToast } from "@/hooks/use-toast";
 
 
