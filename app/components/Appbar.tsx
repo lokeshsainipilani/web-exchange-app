@@ -24,7 +24,7 @@ export const Appbar = () => {
             </div>
             <div className="flex">
                 <div className="p-2 mr-2 flex flex-row">
-                    <DepositModal />TATA.png"
+                    <DepositModal />
                     <PrimaryButton>Withdraw</PrimaryButton>
                 </div>
             </div>
