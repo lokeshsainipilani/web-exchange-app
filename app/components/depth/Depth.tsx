@@ -43,7 +43,7 @@ export function Depth({ market }: { market: string }) {
   const askPercentage = (totalAskVolume / totalVolume) * 100 || 0;
 
   useEffect(() => {
-    const instance = SignalingManager.getInstance();
+    const instance = SignalingManager.getInstance(market);
     instance.registerCallback(
       "depth",
       (data: any) => {

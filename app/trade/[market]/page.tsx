@@ -43,10 +43,10 @@ export default function Page() {
         console.error("Error fetching balance:", error);
       }
     }
-
+    fetchBalance();
     setInterval(() => {
       fetchBalance();
-    }, 30000);
+    }, 1000 * 10);
   }, []);
 
   return (

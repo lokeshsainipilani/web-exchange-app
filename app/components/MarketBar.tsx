@@ -20,7 +20,7 @@ export const MarketBar = ({ market }: { market: string }) => {
   }, []);
   useEffect(() => {
     getTicker(market).then(setTicker);
-    SignalingManager.getInstance().registerCallback(
+    SignalingManager.getInstance(market).registerCallback(
       "ticker",
       (data: Partial<Ticker>) =>
         setTicker((prevTicker) => ({
@@ -38,7 +38,7 @@ export const MarketBar = ({ market }: { market: string }) => {
         })),
       `TICKER-${market}`
     );
-    SignalingManager.getInstance().sendMessage({
+    SignalingManager.getInstance(market).sendMessage({
       method: "SUBSCRIBE",
       params: [`ticker.${market}`],
     });
@@ -47,11 +47,11 @@ export const MarketBar = ({ market }: { market: string }) => {
       //Whenver the Market Changes or Re-render is Done
       //or the Component UnMounts,
       // then This logic is Run after that the Above logic is Run
-      SignalingManager.getInstance().deRegisterCallback(
+      SignalingManager.getInstance(market).deRegisterCallback(
         "ticker",
         `TICKER-${market}`
       );
-      SignalingManager.getInstance().sendMessage({
+      SignalingManager.getInstance(market).sendMessage({
         method: "UNSUBSCRIBE",
         params: [`ticker.${market}`],
       });
