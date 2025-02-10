@@ -51,11 +51,8 @@ export class SignalingManager {
       this.bufferedMessages = [];
     };
     this.ws.onmessage = (event) => {
-      console.log("event: ", event);
       const message = JSON.parse(event.data);
-      console.log("message: ", message);
       const type = message.data.e;
-      console.log("message.stream: ", message.stream);
       if (this.callbacks[type]) {
         this.callbacks[type].forEach(({ callback }: { callback: any }) => {
           if (type === "ticker") {
@@ -67,17 +64,14 @@ export class SignalingManager {
               quoteVolume: message.data.V,
               symbol: message.data.s,
             };
-            console.log(newTicker);
             callback(newTicker);
           }
           if (type === "depth") {
-            console.log("Bhai Depth Toh aa rahi hai");
             const updatedBids = message.data.b;
             const updatedAsks = message.data.a;
             callback({ bids: updatedBids, asks: updatedAsks });
           }
           if (type === "trade") {
-            console.log("Bhai Trade Toh aa rahi hai");
             const newTrade = {
               tradeId: message.data.t,
               isBuyerMaker: message.data.m,

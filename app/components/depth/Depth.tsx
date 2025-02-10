@@ -52,9 +52,6 @@ export function Depth({ market }: { market: string }) {
           updates: [string, string][],
           isAsk: boolean
         ): [string, string][] => {
-          console.log("Am I Updating the Order Book?");
-          console.log("Original: ", original);
-          console.log("Updates: ", updates);
           const orderMap = new Map(original || []);
           for (let i = 0; i < updates.length; i++) {
             const [price, size] = updates[i];

@@ -38,7 +38,6 @@ export default function Page() {
         setOpenOrders(response.data.openOrders);
         setBalance(response.data.balance);
         setInr(response.data.inr);
-        console.log("Balance fetched:", response.data);
       } catch (error) {
         console.error("Error fetching balance:", error);
       }

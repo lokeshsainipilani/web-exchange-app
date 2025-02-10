@@ -82,7 +82,6 @@ export default function Component() {
     const fetchData = async () => {
       try {
         const res = (await CombineData()) ?? null;
-        console.log("res: ", res);
         setData(res);
       } catch (error) {
         console.error("Error fetching data:", error);

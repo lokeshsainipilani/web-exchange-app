@@ -183,7 +183,6 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
                     side: activeTab.toString(),
                     userId: "1", // You might want to get this from authentication
                   });
-                  console.log("response: ", response.data);
                   setOrderPlaced(!orderPlaced);
                   toast({
                     variant: "success",

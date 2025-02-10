@@ -46,11 +46,9 @@ export async function getTickers() {
 export async function getDepth(market: string): Promise<Depth> {
   if (market === 'TATA_INR') {
     const response = await axios.get(`${BASE_URL}/depth?symbol=${market}`);
-    console.log("response: ", response);
     return response.data;
   } else {
     const response = await fetch(`/api/v1/depth?symbol=${market}`);
-    console.log("response: ", response);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

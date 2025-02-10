@@ -19,12 +19,10 @@ export interface Ticker {
 export async function GET(): Promise<NextResponse<Ticker[] | { error: string }>> {
   try {
     const response = await fetch(`${BASE_URL}/tickers`);
-    console.log("response: ", response);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data: Ticker[] = await response.json();
-    console.log("data: ", data);
     return NextResponse.json(data);
   } catch (error) {
     console.log("error: ", error);
