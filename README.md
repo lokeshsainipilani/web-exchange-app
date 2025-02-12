@@ -13,9 +13,11 @@ The Exchange Platform is a high-performance trading system designed for real-tim
 <img width="807" alt="Screenshot 2025-02-12 at 4 24 25 PM" src="https://github.com/user-attachments/assets/cdc2d8f3-bfc1-4d0a-bd71-82f13c88b10f" />
 
 <img width="800" alt="Screenshot 2025-02-12 at 6 27 19 PM" src="https://github.com/user-attachments/assets/599b5800-356c-47c2-855e-ca15a7caaad6" />
+
+
+
+
 ## Tech Stack
-
-
 - **Frontend:**  
   - **Next.js & React:** For dynamic, server-rendered interfaces.
   - **TailwindCSS:** For responsive, modern UI styling.
