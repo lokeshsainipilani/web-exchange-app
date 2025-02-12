@@ -21,10 +21,8 @@ The Exchange Platform is a high-performance trading system designed for real-tim
   - **Redis:** Used to decouple order submission from processing and for distributing events.
 - **Order Matching Engine:**  
   - **Custom-built in Node.js:** Processes and matches orders efficiently.
-- **Authentication:**  
-  - **NextAuth:** Ensures secure and scalable user authentication.
 - **Deployment:**  
-  - **Docker & AWS:** For containerized, cloud-based deployment and scaling.
+  - **Railway:** Currently Deployed on Railway.
 
 ## Architecture & Data Flow
 
