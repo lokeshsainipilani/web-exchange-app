@@ -20,7 +20,7 @@ export function SwapUI({ market , balance , inr }: { market: string , balance: s
 
   return (
     <div>
-      <div className="flex font-mono flex-col text-white">
+      <div className="flex font-inter flex-col text-white">
         <div className="flex flex-row h-[76px]">
           <BuyButton activeTab={activeTab} setActiveTab={setActiveTab} />
           <SellButton activeTab={activeTab} setActiveTab={setActiveTab} />

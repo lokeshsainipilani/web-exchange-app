@@ -49,7 +49,7 @@ export function TradeView({
 
   return (
     <>
-      <div className="font-mono"  ref={chartRef} style={{ height: "75vh", width: "100%", marginTop: 4 }}></div>
+      <div className="font-inter"  ref={chartRef} style={{ height: "75vh", width: "100%", marginTop: 4 }}></div>
     </>
   );
 }

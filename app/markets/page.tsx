@@ -217,7 +217,7 @@ export default function Component() {
   const newEntries = getNewListings(data);
 
   return (
-    <div className="bg-[#121212] font-mono text-white min-h-screen p-4 tracking-widest">
+    <div className="bg-[#121212] font-inter text-white min-h-screen p-4 tracking-widest">
       <div className="max-w-7xl mx-auto">
         {/* <div className="relative bg-[#1c1c1c] rounded-xl overflow-hidden mb-6 pt-32">
           <div className="absolute inset-0">
@@ -257,6 +257,65 @@ export default function Component() {
           </div>
         </div> */}
         <Carousel />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <motion.div 
+            className="bg-neutral-900/50 cursor-pointer  p-6 rounded-xl flex items-center gap-6 "
+            transition={{ duration: 0.2 }}
+            onClick={() => window.location.href = "/trade/TATA_INR"}
+          >
+            <div className="p-4 bg-purple-500/10 rounded-full">
+              <div className="relative">
+          <TrendingUp className="w-8 h-8 text-purple-500" />
+          <motion.div 
+            className="absolute -top-2 -right-2 w-4 h-4 bg-green-500 rounded-full"
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+          />
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+          <h3 className="text-xl font-semibold mb-1">TATA/INR Market</h3>
+          <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">HOT</span>
+              </div>
+              <p className="text-neutral-400">Trading at ₹500 • Volume: ₹1.2M</p>
+              <div className="flex items-center gap-2 mt-1">
+          <span className="text-green-500">+12.5%</span>
+          <span className="text-xs text-neutral-400">(24h)</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="bg-neutral-900/50 cursor-pointer  p-6 rounded-xl flex items-center gap-6"
+            transition={{ duration: 0.2 }}
+            onClick={() => window.location.href = "/trade/TATA_INR"}
+          >
+            <div className="p-4 bg-blue-500/10 rounded-full">
+              <svg 
+          className="w-8 h-8 text-blue-500"
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+              >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+          />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-1">Market Overview</h3>
+              <p className="text-neutral-400">TATA/INR leads with highest volume</p>
+              <div className="mt-1 text-xs text-neutral-400">
+          Updated 2 mins ago
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-blue-900/10  p-4 rounded-xl">

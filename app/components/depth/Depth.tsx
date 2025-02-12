@@ -211,7 +211,7 @@ export function Depth({ market }: { market: string }) {
               </span>
             )}
           </td>
-          <td className="p-2 text-slate-400 font-mono">
+          <td className="p-2 text-slate-400 font-inter">
             {parseFloat(qty).toFixed(3)}
           </td>
             </motion.tr>

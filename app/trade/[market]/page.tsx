@@ -49,7 +49,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="flex flex-col font-mono lg:flex-row w-full h-full">
+    <div className="flex flex-col font-inter lg:flex-row w-full h-full">
       <div className="flex flex-col lg:w-3/4 h-full">
         {/* MarketBar at the top */}
         <div className="w-full">
