@@ -275,15 +275,37 @@ export default function Component() {
           </div>
         </div>
 
-        <div className="bg-blue-900/10   p-4 rounded-xl ">
-          <div className="flex space-x-4 mb-4 ">
-            <button className="text-blue-500 border-b-2 border-blue-500 pb-2">
+        <div className="bg-neutral-900/10 p-4 rounded-xl">
+            <div className="flex space-x-4 mb-4">
+            <motion.button
+              className="px-4 py-2 text-white bg-neutral-800/50 rounded-lg font-medium border border-neutral-700"
+              whileHover={{ 
+              scale: 1.05,
+              backgroundColor: "rgba(255,255,255,0.1)",
+              transition: { duration: 0.2 }
+              }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               Spot
-            </button>
-            <button className="text-neutral-400 hover:text-white">
+            </motion.button>
+            <motion.button
+              className="px-4 py-2 text-neutral-400 rounded-lg font-medium hover:text-white"
+              whileHover={{ 
+              scale: 1.05,
+              backgroundColor: "rgba(255,255,255,0.05)",
+              transition: { duration: 0.2 }
+              }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
               Favorites
-            </button>
-          </div>
+            </motion.button>
+            </div>
           <CryptoTable data={data} />
         </div>
       </div>
