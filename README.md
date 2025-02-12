@@ -13,7 +13,7 @@ The Exchange Platform is a high-performance trading system designed for real-tim
 - **Backend:**  
   - **Node.js & Express:** Provides a fast, non-blocking environment for API services.
 - **Database:**  
-  - **PostgreSQL (via Prisma ORM):** For reliable transactional data storage.
+  - **PostgreSQL:** For reliable transactional data storage.
   - **Time Series DB:** For logging and analyzing high-frequency trade data.
 - **Real-Time Communication:**  
   - **WebSockets (Socket.io):** To push immediate market updates and trade notifications.
