@@ -1,10 +1,4 @@
 # Exchange Platform
-https://app.supademo.com/demo/cm71v4s031c9o11f7zrvy1qc5
-
-
-https://github.com/user-attachments/assets/27144ab6-ef81-45fa-9982-8bbd809ae876
-
-
 
 
 ## Overview
