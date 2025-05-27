@@ -1,8 +1,8 @@
 import axios from "axios";
 import { Depth, KLine, Ticker, Trade } from "./types";
-// const BASE_URL = "https://api.backpack.exchange/api/v1";
+export const BASE_URL = "https://api.backpack.exchange/api/v1";
 // export const BASE_URL = "http://localhost:3003/api/v1";
-export const BASE_URL = "https://exchangeapirailway-production.up.railway.app/api/v1"
+// export const BASE_URL = "https://exchangeapirailway-production.up.railway.app/api/v1"
 // export const BASE_URL = "https://16976863.exchange-api-akp.pages.dev/api/v1";
 
 

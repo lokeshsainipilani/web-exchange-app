@@ -420,7 +420,9 @@ function CryptoList({ items }: { items: CryptoData[] }) {
                 <Image
                   src={crypto.image}
                   alt={crypto.symbol}
-                  className="w-full h-full object-cover"
+                  width={64}
+                  height={64}
+                  className=" object-cover"
                 />
               </motion.div>
               <div>

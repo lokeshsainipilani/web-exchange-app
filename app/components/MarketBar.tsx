@@ -146,7 +146,9 @@ function TickerButton({ market, tokenImage }: { market: string, tokenImage: stri
           loading="lazy"
           decoding="async"
           data-nimg="1"
-          className="z-10 rounded-full h-6 w-6 mt-4 outline-baseBackgroundL1"
+          width={24}
+          height={24}
+          className="z-10 w-6 h-6 rounded-full  mt-4 outline-baseBackgroundL1"
           src={market === "TATA_INR" ? "/TATA.png" : tokenImage || "/sol copy.webp"}
         />
         <Image
@@ -154,7 +156,9 @@ function TickerButton({ market, tokenImage }: { market: string, tokenImage: stri
           loading="lazy"
           decoding="async"
           data-nimg="1"
-          className="h-6 w-6 -ml-2 mt-4 rounded-full"
+          width={24}
+          height={24}
+          className="w-6 h-6 -ml-2 mt-4 rounded-full"
           src="/usdc copy.webp"
         />
       </div>
